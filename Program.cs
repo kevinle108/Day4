@@ -11,6 +11,7 @@ namespace Day4
             var itemCodes = new List<string> { "B1", "B2", "B3", "B4", "B5", "B6", "D1", "D2", "D3" };
             var itemNames = new List<string> { "Sausage Biscuit", "Sausage with Egg Biscuit", "Bacon, Egg & Cheese Biscuit", "Bacon, Egg & Cheese Bagel", "Hotcakes", "Hotcakes and Sausage", "Coffee", "Soft Drink", "Tea" };
             var itemPrices = new List<double> { 3.50, 4.00, 4.25, 4.50, 3.75, 4.75, 2.50, 1.50, 1.75 };
+            //var itemPricesDeci = itemPrices.ConvertAll(x => Convert.ToDecimal(x));
             string itemCode;
             double total = 0.00;
             var itemsOrdered = new List<string>();
@@ -54,7 +55,7 @@ namespace Day4
             Console.WriteLine($"FINAL TOTAL: ${total}");
             Console.Write($"Enter amount tendered: ");
             double amountTendered = Convert.ToDouble(Console.ReadLine());
-            double change = Math.Round(amountTendered - total);
+            double change = Math.Round(amountTendered - total, 2);
             Console.WriteLine($"CHANGE: ${change}");
 
 
